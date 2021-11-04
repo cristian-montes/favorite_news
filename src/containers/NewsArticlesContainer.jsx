@@ -9,6 +9,7 @@ export default class NewsContainer extends Component {
     state= {
         loading: true,
         articles:[],
+        newsName:'top'
     }
 
     async componentDidMount(){
