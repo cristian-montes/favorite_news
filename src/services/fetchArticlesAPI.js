@@ -4,3 +4,5 @@ export const fetchArticles = async (news) => {
     console.log('ARTICLES', articles.articles);
     return articles.articles
 }
+
+

@@ -1,14 +1,15 @@
 import React from "react";
 
-export default function NewsArticleSearch(){
+export default function NewsArticleSearch({ newsName,onHandleNewsNameChange, onHandleSubmit }){
     return(
-        <form>
+        <form onSubmit={onHandleSubmit}>
             <label htmlFor="newsName">News Name</label>
             <input
                 id="newsName"
                 name="newsName"
                 type="text"
-                value=''
+                value={newsName}
+                onChange={onHandleNewsNameChange}
             />
             <button aria-label="get-news"> Get Your Fave News</button>
         </form>
