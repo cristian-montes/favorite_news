@@ -1,11 +1,7 @@
-// import logo from './logo.svg';
+import React from 'react';
+import NewsContainer from '../../containers/NewsContainer';
 
-import './App.css';
-
-function App() {
-  return (
-    <h1>Hellow Peeps</h1>
-  );
+export default function App() {
+  return <NewsContainer/>;
 }
 
-export default App;
