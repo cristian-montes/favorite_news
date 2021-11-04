@@ -1,10 +1,10 @@
 import React, { Component} from 'react';
-
+import NewsArticleList from '../components/newsArticles/NewsArticleList';
 export default class NewsContainer extends Component {
   
     render(){
         return (
-            <h1> THIS IS THE NEWS-CONTAINER</h1>
+            <NewsArticleList/>
         )
     }
 }
