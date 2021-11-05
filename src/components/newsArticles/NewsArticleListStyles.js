@@ -6,4 +6,6 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     list-style: none;
+    padding-top: 7.7%;
+
 `;

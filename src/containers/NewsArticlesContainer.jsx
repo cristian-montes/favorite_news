@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import NewsArticleList from '../components/newsArticles/NewsArticleList';
 import NewsArticleSearch from '../components/newsArticles/NewsArticleSearch';
 import { fetchArticles } from '../services/fetchArticlesAPI';
+import { MainContainer } from './NewsArticlesContainerStyles';
 
 
 
@@ -37,7 +38,7 @@ export default class NewsContainer extends Component {
         const{loading, articles, newsName} = this.state;
         const newsTitle = newsName.toUpperCase();
         return (
-            <div>
+            <MainContainer>
             {loading ? (<h1>Loading...</h1>)
             :(
                 <div>
@@ -52,7 +53,7 @@ export default class NewsContainer extends Component {
                 </div>
             )}
 
-        </div>
+        </MainContainer>
         )
     }
 }
