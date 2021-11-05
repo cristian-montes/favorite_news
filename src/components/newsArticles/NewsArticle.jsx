@@ -1,16 +1,23 @@
 import React from 'react';
+import { Author, Container, FullStory, Image, Title, TitleDiv } from './NewsArticleStyles';
 
 
-export default function NewsArticle(){
+export default function NewsArticle({title, author, description, image, articleURL}){
     return (
-        <figure>
-            <div>
-                <p>title</p>
-                <p>description</p>
-                <p> author</p>
-                <p> Link to read full article</p>
-            </div>
-        </figure>
+        <Container>
+            <a href={articleURL} target={"_blank"} rel="noreferrer"> 
+                <Image src={image} alt={author} height={200} width={200} />
+            </a>
+
+            <TitleDiv>
+                <Title>{title}</Title>
+                <p>{description}</p>
+                <Author>By {author}</Author>
+                <a href={articleURL} target={"_blank"} rel="noreferrer" style={{textDecoration: "none"}} > 
+                    <FullStory> View Full Story </FullStory>
+                </a>
+            </TitleDiv>
+        </Container>
     )
 }
 
