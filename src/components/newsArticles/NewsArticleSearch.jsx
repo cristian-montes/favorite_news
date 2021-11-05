@@ -1,9 +1,11 @@
 import React from "react";
+import { Form } from './NewsArticleSearchStyles'
 
-export default function NewsArticleSearch({ newsName,onHandleNewsNameChange, onHandleSubmit }){
+export default function NewsArticleSearch({ newsName,onHandleNewsNameChange, onHandleSubmit, newsTitle }){
     return(
-        <form onSubmit={onHandleSubmit}>
-            <label htmlFor="newsName">News Name</label>
+        <Form onSubmit={onHandleSubmit}>
+        <h1>{newsTitle} NEWS</h1>
+            {/* <label htmlFor="newsName">News Name</label> */}
             <input
                 id="newsName"
                 name="newsName"
@@ -12,6 +14,6 @@ export default function NewsArticleSearch({ newsName,onHandleNewsNameChange, onH
                 onChange={onHandleNewsNameChange}
             />
             <button aria-label="get-news"> Get Your Fave News</button>
-        </form>
+        </Form>
     )
 }

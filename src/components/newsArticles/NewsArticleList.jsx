@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsArticle from './NewsArticle';
+import { Container } from './NewsArticleListStyles';
 
 
 export default function NewsArticleList({articles}){
@@ -17,6 +18,6 @@ export default function NewsArticleList({articles}){
 
 
     return (
-        <ul aria-label="articles">{articleList}</ul>
+        <Container aria-label="articles">{articleList}</Container>
    )
 }

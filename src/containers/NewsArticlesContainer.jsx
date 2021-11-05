@@ -35,14 +35,15 @@ export default class NewsContainer extends Component {
 
     render(){
         const{loading, articles, newsName} = this.state;
-        const newsTittle = newsName.toUpperCase();
+        const newsTitle = newsName.toUpperCase();
         return (
             <div>
             {loading ? (<h1>Loading...</h1>)
             :(
                 <div>
-                    <h1> {newsTittle} NEWS</h1>
+                    {/* <h1> {newsTitle} NEWS</h1> */}
                     <NewsArticleSearch
+                        newsTitle={newsTitle}
                         newsName={newsName}
                         onHandleNewsNameChange={this.handleNewsNameChange}
                         onHandleSubmit={this.handleSubmit}
