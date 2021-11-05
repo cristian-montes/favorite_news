@@ -1,8 +1,9 @@
 import React, { Component} from 'react';
 import NewsArticleList from '../components/newsArticles/NewsArticleList';
 import NewsArticleSearch from '../components/newsArticles/NewsArticleSearch';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import { fetchArticles } from '../services/fetchArticlesAPI';
-import { MainContainer } from './NewsArticlesContainerStyles';
+import { Loading, MainContainer } from './NewsArticlesContainerStyles';
 
 
 
@@ -39,10 +40,9 @@ export default class NewsContainer extends Component {
         const newsTitle = newsName.toUpperCase();
         return (
             <MainContainer>
-            {loading ? (<h1>Loading...</h1>)
+            {loading ? <Loading>Loading...<LinearProgress/></Loading>
             :(
                 <div>
-                    {/* <h1> {newsTitle} NEWS</h1> */}
                     <NewsArticleSearch
                         newsTitle={newsTitle}
                         newsName={newsName}

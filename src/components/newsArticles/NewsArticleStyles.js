@@ -9,16 +9,23 @@ export const Container = styled.div`
     color:white;
     font: Arial;
     padding: 1rem;
-`;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;`
+    ;
 
 export const Image = styled.img`
-    width:6rem;
-    height: 6rem;
+    width:10rem;
+    height: 9rem;
+    object-fit: cover;
     border-radius: .6rem;
+    justify-content: flex-end;
 `
 
 export const Title = styled.h3`
     font-weight:bold;
+    font-size: 24px;
 `
 
 export const Author = styled.p`
@@ -29,4 +36,14 @@ export const FullStory = styled.h4`
     font-style: italic;
     color:#8ab4f8;
     text-decoration: none;
+    &:hover { 
+        color: pink
+    }
 `
+
+export const TitleDiv = styled.div`
+    width: 70%;
+    min-height: 90%;
+    margin: .1rem;
+    
+`;
